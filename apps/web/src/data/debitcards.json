@@ -1,0 +1,4 @@
+[
+  { "id": 1, "name": "NorthShield CAD Debit", "category": "DEBIT", "currency": "CAD", "description": "Everyday debit card linked to your Canadian dollar chequing account.", "linkedAccountType": "CHEQUING" },
+  { "id": 2, "name": "NorthShield USD Debit", "category": "DEBIT", "currency": "USD", "description": "US dollar debit card linked to a US dollar chequing account.", "linkedAccountType": "CHEQUING" }
+]

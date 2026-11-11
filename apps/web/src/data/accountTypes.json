@@ -1,0 +1,16 @@
+[
+  { "id": 1, "category": "CHEQUING", "name": "Minimum Chequing", "monthlyFee": 3.95, "currency": "CAD", "terms": "12 everyday transactions per month." },
+  { "id": 2, "category": "CHEQUING", "name": "Unlimited Chequing", "monthlyFee": 16.95, "currency": "CAD", "terms": "Unlimited everyday transactions." },
+  { "id": 3, "category": "CHEQUING", "name": "Daily Chequing", "monthlyFee": 10.95, "currency": "CAD", "terms": "25 everyday transactions per month." },
+  { "id": 4, "category": "CHEQUING", "name": "Senior Chequing", "monthlyFee": 0, "currency": "CAD", "terms": "Everyday banking for customers aged 65 and over." },
+  { "id": 5, "category": "CHEQUING", "name": "Student Chequing", "monthlyFee": 0, "currency": "CAD", "terms": "Everyday banking for eligible students." },
+  { "id": 6, "category": "SAVINGS", "name": "Everyday Savings", "monthlyFee": 0, "currency": "CAD", "terms": "Variable interest; no minimum balance." },
+  { "id": 7, "category": "SAVINGS", "name": "Boost Rate Savings", "monthlyFee": 0, "currency": "CAD", "terms": "Tiered variable interest on savings balances." },
+  { "id": 8, "category": "REGISTERED", "name": "TFSA", "monthlyFee": 0, "currency": "CAD", "terms": "Tax-free savings, subject to contribution limits." },
+  { "id": 9, "category": "REGISTERED", "name": "FHSA", "monthlyFee": 0, "currency": "CAD", "terms": "Registered savings for eligible first-time home buyers." },
+  { "id": 10, "category": "REGISTERED", "name": "RRSP", "monthlyFee": 0, "currency": "CAD", "terms": "Registered retirement savings, subject to contribution limits." },
+  { "id": 11, "category": "INVESTMENT", "name": "GIC", "monthlyFee": 0, "currency": "CAD", "terms": "Fictional one-year fixed-term investment; non-redeemable." },
+  { "id": 12, "category": "REGISTERED", "name": "LIF", "monthlyFee": 0, "currency": "CAD", "terms": "Locked-in retirement income, subject to withdrawal limits." },
+  { "id": 13, "category": "PERSONAL_LOAN", "name": "Personal Loan", "monthlyFee": 0, "currency": "CAD", "terms": "Fixed-term personal loan with scheduled repayments of principal and interest." },
+  { "id": 14, "category": "LINE_OF_CREDIT", "name": "Line of Credit", "monthlyFee": 0, "currency": "CAD", "terms": "Revolving credit line with flexible repayment up to the approved limit." }
+]

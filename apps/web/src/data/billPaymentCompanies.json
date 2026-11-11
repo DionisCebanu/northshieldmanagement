@@ -1,0 +1,12 @@
+[
+  { "id": 1, "name": "Bell Canada", "category": "Telecommunications", "accountNumberFormat": "9-digit account number", "accountNumberPattern": "^\\d{9}$", "status": "ACTIVE" },
+  { "id": 2, "name": "Rogers Communications", "category": "Telecommunications", "accountNumberFormat": "9-digit account number", "accountNumberPattern": "^\\d{9}$", "status": "ACTIVE" },
+  { "id": 3, "name": "Hydro-Québec", "category": "Utilities", "accountNumberFormat": "10-digit account number", "accountNumberPattern": "^\\d{10}$", "status": "ACTIVE" },
+  { "id": 4, "name": "Vidéotron", "category": "Telecommunications", "accountNumberFormat": "8-digit account number", "accountNumberPattern": "^\\d{8}$", "status": "ACTIVE" },
+  { "id": 5, "name": "BMO Mastercard", "category": "Credit Card", "accountNumberFormat": "16-digit card number", "accountNumberPattern": "^\\d{16}$", "status": "ACTIVE" },
+  { "id": 6, "name": "RBC Credit Card", "category": "Credit Card", "accountNumberFormat": "16-digit card number", "accountNumberPattern": "^\\d{16}$", "status": "ACTIVE" },
+  { "id": 7, "name": "CIBC Credit Card", "category": "Credit Card", "accountNumberFormat": "16-digit card number", "accountNumberPattern": "^\\d{16}$", "status": "ACTIVE" },
+  { "id": 8, "name": "TELUS", "category": "Telecommunications", "accountNumberFormat": "9-digit account number", "accountNumberPattern": "^\\d{9}$", "status": "ACTIVE" },
+  { "id": 9, "name": "Fizz", "category": "Telecommunications", "accountNumberFormat": "8-digit account number", "accountNumberPattern": "^\\d{8}$", "status": "ACTIVE" },
+  { "id": 10, "name": "Énergir", "category": "Utilities", "accountNumberFormat": "10-digit account number", "accountNumberPattern": "^\\d{10}$", "status": "ACTIVE" }
+]

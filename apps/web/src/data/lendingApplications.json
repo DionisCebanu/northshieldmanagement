@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "clientId": 2,
+    "productType": "LINE_OF_CREDIT",
+    "requestedAmount": 20000,
+    "purpose": "Home renovation and working capital",
+    "annualInterestRate": 6.5,
+    "repaymentTermMonths": null,
+    "applicationDate": "2026-10-15",
+    "employmentStatus": "SELF_EMPLOYED",
+    "employer": "Bennett Design Studio",
+    "occupation": "Graphic Designer",
+    "notes": "Customer requests flexible repayment schedule.",
+    "status": "PENDING_APPROVAL"
+  }
+]

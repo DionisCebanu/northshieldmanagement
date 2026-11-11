@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1, "clientId": 1, "productId": 1, "cardType": "DEBIT",
+    "cardNumber": "4512345678901234", "cardholderName": "Dionis Cebanu",
+    "expiryDate": "2027-08", "dateOpened": "2025-01-12", "dateClosed": null, "status": "ACTIVE",
+    "linkedAccountId": 1, "currency": "CAD"
+  },
+  {
+    "id": 2, "clientId": 1, "productId": 1, "cardType": "CREDIT",
+    "cardNumber": "5412345678901234", "cardholderName": "Dionis Cebanu",
+    "expiryDate": "2028-03", "dateOpened": "2025-02-20", "dateClosed": null, "status": "ACTIVE",
+    "creditLimit": 5000, "outstandingBalance": 1250.75, "currency": "CAD"
+  },
+  {
+    "id": 3, "clientId": 2, "productId": 1, "cardType": "DEBIT",
+    "cardNumber": "4512789012345612", "cardholderName": "Amelia Bennett",
+    "expiryDate": "2026-11", "dateOpened": "2023-08-25", "dateClosed": null, "status": "ACTIVE",
+    "linkedAccountId": 3, "currency": "CAD"
+  },
+  {
+    "id": 4, "clientId": 2, "productId": 2, "cardType": "CREDIT",
+    "cardNumber": "5412789012345612", "cardholderName": "Amelia Bennett",
+    "expiryDate": "2027-06", "dateOpened": "2024-02-15", "dateClosed": null, "status": "ACTIVE",
+    "creditLimit": 8000, "outstandingBalance": 3450, "currency": "CAD"
+  },
+  {
+    "id": 5, "clientId": 2, "productId": 3, "cardType": "CREDIT",
+    "cardNumber": "5413567812349876", "cardholderName": "Amelia Bennett",
+    "expiryDate": "2028-09", "dateOpened": "2025-05-10", "dateClosed": null, "status": "ACTIVE",
+    "creditLimit": 10000, "outstandingBalance": 0, "currency": "CAD"
+  }
+]

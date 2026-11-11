@@ -1,0 +1,4 @@
+[
+  { "id": 1, "clientId": 1, "product": "NorthShield Visa Platinum Credit Card", "amount": 5000, "currency": "CAD", "expiry": "2027-03-31", "status": "PENDING", "description": "Pre-approved credit card offer with a $5,000 limit, no annual fee for the first year and 1.5% cash back on everyday purchases." },
+  { "id": 2, "clientId": 1, "product": "Personal Line of Credit", "amount": 10000, "currency": "CAD", "expiry": "2027-03-31", "status": "PENDING", "description": "Pre-approved $10,000 unsecured line of credit at a promotional 7.9% variable interest rate, with flexible repayment and no setup fee." }
+]

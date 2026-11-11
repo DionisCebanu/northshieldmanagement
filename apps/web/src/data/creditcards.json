@@ -1,0 +1,7 @@
+[
+  { "id": 1, "name": "NorthShield Cash Back", "category": "CASH_BACK", "annualFee": 0, "currency": "CAD", "description": "Earn cash back on everyday purchases with no annual fee.", "rewardType": "Cash back" },
+  { "id": 2, "name": "NorthShield Gold", "category": "GOLD", "annualFee": 89, "currency": "CAD", "description": "Premium rewards and travel benefits with a low annual fee.", "rewardType": "Points" },
+  { "id": 3, "name": "NorthShield Travel", "category": "TRAVEL", "annualFee": 120, "currency": "CAD", "description": "Earn travel points and enjoy travel insurance coverage.", "rewardType": "Travel points" },
+  { "id": 4, "name": "NorthShield Infinite", "category": "INFINITE", "annualFee": 139, "currency": "CAD", "description": "Unlimited premium travel, lounge access and concierge service.", "rewardType": "Travel points" },
+  { "id": 5, "name": "NorthShield Diamond", "category": "DIAMOND", "annualFee": 199, "currency": "CAD", "description": "Top-tier rewards, highest earn rates and exclusive perks.", "rewardType": "Points" }
+]

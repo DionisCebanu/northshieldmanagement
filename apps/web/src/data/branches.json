@@ -1,0 +1,4 @@
+[
+  { "id": "BR-001", "name": "Montreal Centre", "transitNumber": "12345", "street": "100 Example Boulevard", "city": "Montreal", "province": "QC", "postalCode": "H2X 1Y4", "status": "ACTIVE" },
+  { "id": "BR-002", "name": "Toronto Midtown", "transitNumber": "23456", "street": "250 Sample Avenue", "city": "Toronto", "province": "ON", "postalCode": "M4P 2H5", "status": "ACTIVE" }
+]

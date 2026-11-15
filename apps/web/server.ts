@@ -27,7 +27,9 @@ const isDevelopment = process.env.NODE_ENV === 'development';
 const port = Number(process.env.PORT ?? 3000);
 const host = process.env.HOST ?? '::';
 const appDirectory = path.dirname(fileURLToPath(import.meta.url));
-const buildDirectory = path.resolve(appDirectory, '../../dist/apps/web');
+const buildDirectory = process.env.BUILD_DIRECTORY
+  ? path.resolve(process.env.BUILD_DIRECTORY)
+  : path.resolve(appDirectory, '../../dist/apps/web');
 const serverAppEntry = path.join(appDirectory, 'server/app.ts');
 const SERVER_APP_RELOAD_DELAY_MS = 300;
 // Same check as `src/lib/realtime.server.ts`, which Node cannot import here (it resolves `@/` through Vite).

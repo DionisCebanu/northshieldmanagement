@@ -4,12 +4,12 @@
 	"version": "0.0.0",
 	"private": true,
 	"scripts": {
-		"setup": "bun install",
-		"dev": "concurrently --kill-others --raw \"npm run dev --prefix apps/web\"",
-		"build": "npm run build --prefix apps/web",
-		 "start": "node server.js",
-		"lint": "concurrently --raw \"npm run lint --prefix apps/web\"",
-		"typecheck": "concurrently --raw \"npm run typecheck --prefix apps/web\""
+	"setup": "bun install",
+	"dev": "concurrently --kill-others --raw \"npm run dev --prefix apps/web\"",
+	"build": "npm run build --prefix apps/web && node scripts/prepare-production.mjs",
+	"start": "node dist/apps/web/server.js",
+	"lint": "concurrently --raw \"npm run lint --prefix apps/web\"",
+	"typecheck": "concurrently --raw \"npm run typecheck --prefix apps/web\""
 	},
 	"devDependencies": {
 		"concurrently": "^10.0.6",

@@ -10,7 +10,7 @@ await copyFile(
   resolve(outputDirectory, "server.ts")
 );
 
-// Create a JavaScript entry point for Hostinger.
+// Create a Hostinger-compatible JavaScript entry point.
 await writeFile(
   resolve(outputDirectory, "server.js"),
   `import { fileURLToPath } from "node:url";
@@ -18,7 +18,10 @@ await writeFile(
 process.env.NODE_ENV = "production";
 process.env.BUILD_DIRECTORY = fileURLToPath(new URL(".", import.meta.url));
 
-await import("./server.ts");
+import("./server.ts").catch((error) => {
+  console.error("Failed to start production server:", error);
+  process.exit(1);
+});
 `,
   "utf8"
 );

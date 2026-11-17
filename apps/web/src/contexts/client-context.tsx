@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
+import { createContext, useContext, useEffect, useRef, useState, type ReactNode } from 'react';
 import { useNavigation } from 'react-router';
 import { getClientWorkspace, updateClientProfile } from '@/services/clientService';
 import { setCardStatus } from '@/services/cardService';
@@ -11,6 +11,7 @@ import type { CardStatus, CardType, Client, ClientWorkspace, OfferStatus } from 
 type ClientState = {
   workspace: ClientWorkspace | null;
   loading: boolean;
+  activeClientId: number;
   error: string | null;
   selectClient: (id: number) => Promise<void>;
   reloadWorkspace: () => Promise<void>;
@@ -27,85 +28,109 @@ export function ClientProvider({ initialWorkspace, initialError, children }: { i
   const [error, setError] = useState(initialError);
   const [loading, setLoading] = useState(false);
   const navigation = useNavigation();
+  const [activeClientId, setActiveClientId] = useState(initialWorkspace?.client.id ?? clientProfile.clientId);
+  const requestVersion = useRef(0);
+  const selectedClientRef = useRef(initialWorkspace?.client.id ?? clientProfile.clientId);
 
-  async function loadWorkspace(id: number, showLoading: boolean) {
-    if (showLoading) setLoading(true);
+  async function loadWorkspace(id: number, showLoading: boolean): Promise<void> {
+    const version = ++requestVersion.current;
+    if (showLoading) {
+      setLoading(true);
+      setWorkspace(null); // Never show the previous customer's data during a switch.
+    }
     setError(null);
     try {
-      setWorkspace(await getClientWorkspace(id));
-    } catch {
+      const next = await getClientWorkspace(id);
+      if (!next) throw new Error('Customer not found.');
+      if (version !== requestVersion.current) return; // Ignore stale responses.
+      selectedClientRef.current = id;
+      setActiveClientId(id);
+      setWorkspace(next);
+    } catch (err) {
+      if (version !== requestVersion.current) return;
       setWorkspace(null);
-      setError('We could not load this customer. Please try again.');
+      const message = err instanceof Error ? err.message : 'Could not load the customer.';
+      setError(message);
+      throw err;
     } finally {
-      if (showLoading) setLoading(false);
+      if (version === requestVersion.current && showLoading) setLoading(false);
     }
   }
 
-  // Re-hydrate from localStorage after mount so saved profile edits and card
-  // status changes appear without a full reload. Runs once on mount.
+  // Read customer-specific browser overrides after SSR hydration.
   useEffect(() => {
-    void loadWorkspace(clientProfile.clientId, false);
+    void loadWorkspace(selectedClientRef.current, false).catch(() => undefined);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  async function selectClient(id: number) {
+  async function selectClient(id: number): Promise<void> {
+    if (!Number.isInteger(id) || id <= 0) throw new Error('Invalid customer ID.');
     await loadWorkspace(id, true);
   }
 
-  async function reloadWorkspace() {
-    await loadWorkspace(clientProfile.clientId, false);
+  async function reloadWorkspace(): Promise<void> {
+    await loadWorkspace(selectedClientRef.current, false);
   }
 
   async function updateClient(updates: Partial<Client>) {
-    if (!workspace) return;
+    if (!workspace) throw new Error('No customer selected.');
+    const clientId = workspace.client.id;
     try {
-      const updated = await updateClientProfile(workspace.client.id, updates);
-      setWorkspace(prev => (prev ? { ...prev, client: updated } : prev));
+      const updated = await updateClientProfile(clientId, updates);
+      setWorkspace(prev => (prev?.client.id === clientId ? { ...prev, client: updated } : prev));
     } catch {
       setError('We could not save the customer changes. Please try again.');
+      throw new Error('We could not save the customer changes. Please try again.');
     }
   }
 
   async function updateCardStatus(cardId: number, cardType: CardType, status: CardStatus) {
-    if (!workspace) return;
-    const override = await setCardStatus(workspace.client.id, cardId, cardType, status);
-    setWorkspace(prev => (prev
+    if (!workspace) throw new Error('No customer selected.');
+    const clientId = workspace.client.id;
+    const override = await setCardStatus(clientId, cardId, cardType, status);
+    setWorkspace(prev => (prev?.client.id === clientId
       ? { ...prev, cards: prev.cards.map(card => (card.id === cardId && card.cardType === cardType ? { ...card, ...override } : card)) }
       : prev));
   }
 
   async function createDispute(input: CreateDisputeInput) {
-    if (!workspace) return;
+    if (!workspace) throw new Error('No customer selected.');
+    const clientId = workspace.client.id;
     try {
-      const dispute = await createDisputeService({ ...input, clientId: workspace.client.id });
-      setWorkspace(prev => (prev ? { ...prev, disputes: [dispute, ...prev.disputes] } : prev));
+      const dispute = await createDisputeService({ ...input, clientId });
+      setWorkspace(prev => (prev?.client.id === clientId ? { ...prev, disputes: [dispute, ...prev.disputes] } : prev));
     } catch (err) {
       setError(err instanceof Error ? err.message : 'We could not create the dispute. Please try again.');
+      throw err;
     }
   }
 
   async function respondToOffer(offerId: number, status: OfferStatus) {
-    if (!workspace) return;
+    if (!workspace) throw new Error('No customer selected.');
+    const clientId = workspace.client.id;
     try {
-      const updated = await respondToOfferService(workspace.client.id, offerId, status);
-      setWorkspace(prev => (prev ? { ...prev, offers: prev.offers.map(offer => (offer.id === offerId ? updated : offer)) } : prev));
+      const updated = await respondToOfferService(clientId, offerId, status);
+      setWorkspace(prev => (prev?.client.id === clientId ? { ...prev, offers: prev.offers.map(offer => (offer.id === offerId ? updated : offer)) } : prev));
     } catch (err) {
       setError(err instanceof Error ? err.message : 'We could not update the offer. Please try again.');
+      throw err;
     }
   }
 
   async function addNote(input: AddNoteInput) {
-    if (!workspace) return;
+    if (!workspace) throw new Error('No customer selected.');
+    const clientId = workspace.client.id;
     try {
-      const note = await addNoteService({ ...input, clientId: workspace.client.id });
-      setWorkspace(prev => (prev ? { ...prev, notes: [note, ...prev.notes] } : prev));
+      const note = await addNoteService({ ...input, clientId });
+      setWorkspace(prev => (prev?.client.id === clientId ? { ...prev, notes: [note, ...prev.notes] } : prev));
     } catch (err) {
       setError(err instanceof Error ? err.message : 'We could not save the note. Please try again.');
+      throw err;
     }
   }
 
   return (
-    <ClientContext.Provider value={{ workspace, error, loading: loading || navigation.state === 'loading', selectClient, reloadWorkspace, updateClient, updateCardStatus, createDispute, respondToOffer, addNote }}>
+    <ClientContext.Provider value={{ workspace, activeClientId, error, loading: loading || navigation.state === 'loading', selectClient, reloadWorkspace, updateClient, updateCardStatus, createDispute, respondToOffer, addNote }}>
       {children}
     </ClientContext.Provider>
   );

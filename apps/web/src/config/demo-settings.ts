@@ -4,6 +4,6 @@ export const demoSettings = {
     enabled: true, // Change to true for demonstrations.
     delayMs: 2000,
     customerId: 1,
-    showOncePerSession: false,
+    showOncePerSession: true,
   },
 } as const;

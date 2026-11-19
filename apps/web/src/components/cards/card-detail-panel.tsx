@@ -1,4 +1,4 @@
-import { X, CreditCard, Snowflake, ShieldAlert, Ban, Lock, Unlock } from 'lucide-react';
+import { X, CreditCard, Snowflake, ShieldAlert, Ban, Lock, Unlock, KeyRound } from 'lucide-react';
 import type { ResolvedCard } from '@/lib/banking-types';
 import { money, maskedCardNumber, expiryLabel, dateLabel, humanize } from '@/lib/banking-format';
 import { StatusBadge } from '@/components/customer/status-badge';
@@ -13,7 +13,7 @@ const ACTION_ICONS: Record<string, typeof Snowflake> = {
   CLOSED: Ban,
 };
 
-export function CardDetailPanel({ card, onClose, onAction }: { card: ResolvedCard; onClose: () => void; onAction: (action: CardAction) => void }) {
+export function CardDetailPanel({ card, onClose, onAction, onPinManagement }: { card: ResolvedCard; onClose: () => void; onAction: (action: CardAction) => void; onPinManagement: () => void }) {
   const isDebit = card.cardType === 'DEBIT';
   const actions = availableActions(card.status);
 
@@ -87,7 +87,10 @@ export function CardDetailPanel({ card, onClose, onAction }: { card: ResolvedCar
               </button>
             );
           })}
-          {actions.length === 0 && <span className="card-actions-empty">No actions available for this card.</span>}
+          {card.status !== 'CLOSED' && card.status !== 'LOST' && card.status !== 'STOLEN' && card.status !== 'FRAUD' && (
+            <button type="button" className="button-secondary card-action" onClick={onPinManagement}><KeyRound size={14} />PIN management</button>
+          )}
+          {actions.length === 0 && card.status === 'CLOSED' && <span className="card-actions-empty">No actions available for this card.</span>}
         </div>
       </div>
     </section>

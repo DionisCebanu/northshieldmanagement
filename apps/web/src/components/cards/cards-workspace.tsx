@@ -3,6 +3,7 @@ import { CreditCard } from 'lucide-react';
 import { useClient } from '@/contexts/client-context';
 import { CardTile } from '@/components/cards/card-tile';
 import { CardDetailPanel } from '@/components/cards/card-detail-panel';
+import { PinManagementModal } from '@/components/cards/pin-management-modal';
 import { CardStatusModal } from '@/components/cards/card-status-modal';
 import type { CardType, ResolvedCard } from '@/lib/banking-types';
 import type { CardAction } from '@/lib/card-actions';
@@ -14,6 +15,7 @@ export function CardsWorkspace() {
   const [tab, setTab] = useState<Tab>('DEBIT');
   const [selectedCardId, setSelectedCardId] = useState<number | null>(null);
   const [modal, setModal] = useState<{ card: ResolvedCard; action: CardAction } | null>(null);
+  const [pinCardId, setPinCardId] = useState<number | null>(null);
   const [modalError, setModalError] = useState<string | null>(null);
 
   if (!workspace) return null;
@@ -23,6 +25,7 @@ export function CardsWorkspace() {
   function selectTab(next: Tab) {
     setTab(next);
     setSelectedCardId(null);
+    setPinCardId(null);
   }
 
   async function confirmAction() {
@@ -51,8 +54,16 @@ export function CardsWorkspace() {
         </div>
       )}
 
-      {selectedCard && <CardDetailPanel card={selectedCard} onClose={() => setSelectedCardId(null)} onAction={action => { setModalError(null); setModal({ card: selectedCard, action }); }} />}
+      {selectedCard && <CardDetailPanel card={selectedCard} onClose={() => setSelectedCardId(null)} onPinManagement={() => setPinCardId(selectedCard.id)} onAction={action => { setModalError(null); setModal({ card: selectedCard, action }); }} />}
 
+      {pinCardId !== null && workspace.cards.find(card => card.id === pinCardId) && (
+        <PinManagementModal
+          key={`${workspace.client.id}:${pinCardId}`}
+          card={workspace.cards.find(card => card.id === pinCardId)!}
+          client={workspace.client}
+          onClose={() => setPinCardId(null)}
+        />
+      )}
       {modal && <CardStatusModal card={modal.card} action={modal.action} error={modalError} onConfirm={confirmAction} onCancel={() => { setModal(null); setModalError(null); }} />}
     </section>
   );

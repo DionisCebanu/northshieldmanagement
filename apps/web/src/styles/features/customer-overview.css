@@ -1,0 +1,62 @@
+.customer-banner { border: 1px solid hsl(var(--border)); border-radius: 9px; background: white; margin-bottom: 26px; overflow: hidden; }
+.customer-identity { display: flex; align-items: center; gap: 18px; padding: 24px 25px; }
+.customer-avatar { width: 66px; height: 66px; background: #edf2fa; border: 1px solid #e4ebf5; border-radius: 50%; color: #365983; display: grid; place-items: center; font-size: 24px; font-weight: 550; letter-spacing: -.8px; }
+.eyebrow { font-size: 8px; color: #7f8b9e; font-weight: 650; letter-spacing: 1.3px; margin-bottom: 8px; }
+.customer-name { display: flex; align-items: center; gap: 12px; }
+.customer-name h2 { font-weight: 700; font-size: 22px; letter-spacing: -.55px; }
+.status-badge { display: inline-flex; gap: 5px; align-items: center; padding: 4px 8px; border-radius: 4px; font-weight: 500; font-size: 9px; line-height: 1.3; white-space: nowrap; }
+.status-badge > span { width: 4px; height: 4px; border-radius: 50%; background: currentColor; }
+.status-positive { color: var(--success); background: var(--success-bg); }
+.status-neutral { background: hsl(var(--muted)); color: hsl(var(--muted-foreground)); }
+.customer-identifiers { display: flex; gap: 13px; align-items: center; font-size: 10px; color: hsl(var(--muted-foreground)); margin-top: 9px; }
+.customer-identifiers span { display: flex; gap: 5px; align-items: center; }
+.customer-identifiers strong { font-weight: 500; color: hsl(var(--foreground)); }
+.customer-identifiers i { height: 10px; width: 1px; background: hsl(var(--border)); }
+.button-secondary, .button-primary { display: inline-flex; gap: 8px; align-items: center; justify-content: center; padding: 10px 13px; font-size: 10px; border-radius: 5px; min-height: 36px; font-weight: 550; white-space: nowrap; }
+.button-secondary { background: white; border: 1px solid hsl(var(--border)); color: #415b7b; }
+.button-secondary:hover { border-color: #a3b5ca; background: #f8faff; }
+.button-primary { background: hsl(var(--primary)); border: 1px solid hsl(var(--primary)); color: white; }
+.button-primary:hover { background: #2c4b72; }
+.profile-link { margin-left: auto; }
+.customer-contact { display: flex; align-items: center; gap: 30px; padding: 15px 25px; border-top: 1px solid #edf0f5; background: #fcfdff; font-size: 10px; color: #5b6c82; }
+.customer-contact > span { display: flex; align-items: center; gap: 9px; }
+.customer-contact svg { color: #8b9aae; }
+.customer-contact-note { margin-left: auto; font-size: 8px; color: #92a0b1; }
+.overview-grid { display: grid; grid-template-columns: minmax(0, 1fr) 285px; gap: 24px; align-items: start; }
+.section-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 17px; min-height: 20px; }
+.section-heading h2, .panel-heading h2 { font-size: 14px; font-weight: 650; letter-spacing: -.3px; display: flex; align-items: center; gap: 9px; }
+.count-badge { background: #e8edf4; padding: 2px 6px; min-width: 18px; border-radius: 4px; display: inline-block; color: #6a7d96; font-size: 9px; font-weight: 550; }
+.text-link { font-size: 10px; font-weight: 550; color: #365b87; display: inline-flex; align-items: center; gap: 7px; }
+.text-link:hover { color: #14375e; text-decoration: underline; text-underline-offset: 3px; }
+.account-card-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.account-card { border: 1px solid hsl(var(--border)); border-radius: 8px; padding: 18px 21px 0; background: white; display: block; position: relative; }
+.account-card:hover { border-color: #a9bfd9; box-shadow: 0 4px 14px #24466c08; }
+.account-card-top { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.product-icon { width: 35px; height: 35px; background: var(--blue-tint); color: #45678c; border-radius: 7px; display: grid; place-items: center; }
+.savings-icon { background: #edf5f3; color: #548279; }
+.account-category { font-size: 9px; color: #8190a4; }
+.account-card-top > svg { margin-left: auto; color: #8d9cae; }
+.account-card h3 { font-size: 13px; font-weight: 650; letter-spacing: -.1px; margin-bottom: 5px; }
+.masked-number { color: #8c99aa; font-size: 10px; letter-spacing: 1.5px; font-variant-numeric: tabular-nums; }
+.balance-label { font-size: 9px; color: #7e8a9c; margin-top: 20px; margin-bottom: 5px; }
+.account-balance { display: flex; align-items: baseline; gap: 8px; font-size: 25px; font-weight: 700; letter-spacing: -.7px; font-variant-numeric: tabular-nums; }
+.account-balance > span { font-size: 8px; letter-spacing: 0; font-weight: 500; color: #8a97a9; }
+.account-card-bottom { margin-top: 19px; display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 12px 0; border-top: 1px solid #edf0f5; }
+.account-card-bottom > span:last-child { display: flex; gap: 5px; align-items: center; font-size: 8px; color: #8593a6; }
+.relationship-panel { background: #f0f4fa; border: 1px solid #dee6f1; border-radius: 8px; padding: 20px; }
+.relationship-heading { display: flex; gap: 8px; align-items: center; color: #425f81; }
+.relationship-heading h2 { font-size: 12px; font-weight: 650; letter-spacing: -.2px; }
+.relationship-total { padding: 22px 0 19px; }
+.relationship-total > span { font-size: 9px; color: #6a7c93; }
+.relationship-total > div { display: flex; align-items: baseline; gap: 6px; margin-top: 6px; }
+.relationship-total strong { font-size: 27px; letter-spacing: -.8px; font-weight: 700; }
+.relationship-total small { font-size: 8px; color: #788da6; }
+.relationship-row { border-top: 1px solid #dce5f1; display: flex; align-items: center; gap: 8px; padding: 14px 0; font-size: 10px; color: #6a7b92; }
+.relationship-row > strong { margin-left: auto; color: #334b68; font-size: 12px; }
+.relationship-row svg { color: #7590af; flex-shrink: 0; }
+.branch-row { align-items: flex-start; padding-bottom: 16px; }
+.branch-row strong, .branch-row small { display: block; margin-top: 5px; }
+.branch-row strong { font-size: 11px; font-weight: 550; color: #3c5575; }
+.branch-row small { font-size: 8px; color: #8190a5; }
+.relationship-link { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #dce5f1; padding-top: 14px; font-size: 9px; color: #526f93; }
+.relationship-link:hover { color: #193c65; }

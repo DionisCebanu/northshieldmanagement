@@ -1,0 +1,19 @@
+.transaction-filters { display: flex; align-items: flex-end; flex-wrap: wrap; gap: 13px; padding: 20px 21px; background: #fcfdff; border-block: 1px solid #edf0f5; }
+.transaction-filters label { flex: 1; min-width: 135px; display: flex; flex-direction: column; gap: 8px; font-size: 9px; color: #697d97; }
+.transaction-filters label:first-child { flex: 1.4; }
+.transaction-filters select, .transaction-filters input { background: white; border: 1px solid #dce4ee; color: #425c7d; width: 100%; border-radius: 5px; height: 36px; padding: 0 10px; font-size: 10px; }
+.results-heading { padding: 16px 21px; font-size: 9px; color: #8391a5; display: flex; gap: 14px; justify-content: space-between; align-items: center; }
+.results-heading > span:last-child { display: flex; align-items: center; gap: 7px; font-size: 8px; }
+.legend-dot { width: 5px; height: 5px; background: #56977b; border-radius: 50%; }
+.outgoing-dot { background: #79879a; }
+.filter-error { color: hsl(var(--destructive)); padding: 16px 21px 0; font-size: 11px; }
+.inline-empty { padding: 35px 22px; text-align: center; color: #7f8ea3; font-size: 12px; line-height: 1.8; }
+.inline-empty p { margin: 7px 0 15px; }
+.empty-state { min-height: 370px; background: white; border: 1px solid hsl(var(--border)); border-radius: 9px; padding: 60px 25px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 15px; text-align: center; color: #6b7e97; }
+.empty-state h2, .empty-state h1 { color: #29476b; font-size: 22px; font-weight: 650; }
+.empty-state p { font-size: 12px; max-width: 460px; line-height: 1.9; }
+.coming-soon { padding: 75px 30px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.coming-soon-icon { width: 70px; height: 70px; background: #eef3fa; border-radius: 16px; color: #5479a2; display: grid; place-items: center; margin-bottom: 26px; }
+.coming-soon h2 { font-size: 25px; color: #344d70; letter-spacing: -.5px; font-weight: 650; margin-top: 8px; }
+.coming-soon p { max-width: 450px; font-size: 12px; line-height: 1.9; color: #78899f; margin: 17px 0 25px; }
+.coming-soon-note { display: flex; gap: 8px; align-items: center; color: #8795a9; font-size: 10px; margin-bottom: 28px; }

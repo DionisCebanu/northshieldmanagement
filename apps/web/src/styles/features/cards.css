@@ -1,0 +1,27 @@
+/* Cards */
+.cards-workspace { display: flex; flex-direction: column; gap: 20px; }
+.cards-tabs { display: flex; gap: 6px; border-bottom: 1px solid hsl(var(--border)); }
+.cards-tab { display: inline-flex; align-items: center; gap: 8px; padding: 11px 16px; font-size: 11px; font-weight: 550; color: #8190a4; border: 0; background: transparent; border-bottom: 2px solid transparent; margin-bottom: -1px; }
+.cards-tab:hover { color: #415b7b; }
+.cards-tab-active { color: hsl(var(--primary)); border-bottom-color: hsl(var(--primary)); }
+.card-tile-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.card-tile { text-align: left; border: 1px solid hsl(var(--border)); border-radius: 8px; padding: 18px 18px 14px; background: white; display: flex; flex-direction: column; gap: 6px; }
+.card-tile:hover { border-color: #a9bfd9; box-shadow: 0 4px 14px #24466c08; }
+.card-tile-selected { border-color: hsl(var(--primary)); box-shadow: 0 0 0 2px hsl(var(--ring) / .25); }
+.card-tile-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
+.card-tile-icon { width: 34px; height: 34px; background: var(--blue-tint); color: #45678c; border-radius: 7px; display: grid; place-items: center; }
+.card-tile h3 { font-size: 13px; font-weight: 650; }
+.card-tile-meta { display: flex; flex-direction: column; gap: 3px; font-size: 9px; color: #8190a4; margin-top: 4px; }
+.card-tile-foot { display: flex; align-items: center; justify-content: space-between; margin-top: 10px; padding-top: 11px; border-top: 1px solid #edf0f5; font-size: 9px; color: #8593a6; }
+.card-detail { margin-top: 4px; }
+.card-financials { border-top: 1px solid #edf0f5; padding: 8px 21px 18px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 24px; }
+.card-financial-row { display: flex; flex-direction: column; gap: 5px; }
+.card-financial-row small { font-size: 8px; color: #8391a5; letter-spacing: .5px; }
+.card-financial-row strong { font-size: 14px; font-weight: 650; color: #344b68; font-variant-numeric: tabular-nums; }
+.card-financial-row span { font-size: 9px; color: #8190a4; }
+.card-actions { border-top: 1px solid hsl(var(--border)); padding: 16px 21px 20px; }
+.card-actions-label { display: flex; align-items: center; gap: 8px; font-size: 9px; color: #6a7c93; font-weight: 600; letter-spacing: .5px; margin-bottom: 12px; }
+.card-actions-grid { display: flex; flex-wrap: wrap; gap: 9px; }
+.card-action { padding: 9px 12px; min-height: 34px; font-size: 10px; }
+.card-actions-empty { font-size: 10px; color: #92a0b1; }
+

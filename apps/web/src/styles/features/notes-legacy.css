@@ -1,0 +1,14 @@
+/* Notes */
+.note-form { padding: 8px 21px 18px; display: flex; flex-direction: column; gap: 14px; border-bottom: 1px solid #edf0f5; }
+.notes-list { padding: 8px 21px; display: flex; flex-direction: column; gap: 12px; }
+.note-item { border: 1px solid hsl(var(--border)); border-radius: 7px; padding: 14px 16px; background: #fcfdff; }
+.note-item-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.note-category { font-size: 9px; font-weight: 600; padding: 3px 8px; border-radius: 4px; background: var(--blue-tint); color: #45678c; }
+.note-author { font-size: 10px; color: #6a7c93; font-weight: 550; }
+.note-comment { font-size: 11px; color: #3b526f; line-height: 1.7; margin: 0; }
+.note-meta { font-size: 9px; color: #8190a4; margin-top: 9px; }
+.notes-expired { padding: 16px 21px 8px; }
+.notes-expired-head { display: flex; align-items: center; gap: 8px; font-size: 10px; font-weight: 600; color: #a17a3d; margin-bottom: 12px; }
+.notes-expired .note-item { background: #faf8f4; border-color: #e8ddcd; margin-bottom: 10px; }
+.note-item-expired .note-comment { color: #8a7d68; }
+

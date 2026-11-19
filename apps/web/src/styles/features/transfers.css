@@ -1,0 +1,26 @@
+/* Transfers */
+.transfer-panel { margin-top: 0; }
+.transfer-form { padding: 8px 21px 21px; display: flex; flex-direction: column; gap: 18px; }
+.transfer-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.transfer-row label { display: flex; flex-direction: column; gap: 8px; font-size: 9px; color: #697d97; }
+.transfer-row select, .transfer-row input { background: white; border: 1px solid #dce4ee; color: #425c7d; width: 100%; border-radius: 5px; height: 38px; padding: 0 10px; font-size: 11px; }
+.transfer-balances { display: flex; align-items: center; gap: 18px; background: #f7f9fc; border: 1px solid #e6ecf4; border-radius: 7px; padding: 16px 18px; }
+.transfer-balance { display: flex; flex-direction: column; gap: 5px; flex: 1; }
+.transfer-balance small { font-size: 8px; color: #8391a5; letter-spacing: .5px; }
+.transfer-balance strong { font-size: 18px; font-weight: 700; color: #2c4665; letter-spacing: -.4px; font-variant-numeric: tabular-nums; }
+.transfer-balance span { font-size: 9px; color: #8190a4; }
+.transfer-arrow { color: #9aa8bb; flex-shrink: 0; }
+.transfer-actions { display: flex; gap: 10px; justify-content: flex-end; }
+.transfer-note { font-size: 9px; color: #92a0b1; line-height: 1.7; }
+.transfer-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.transfer-success .transfer-success-head { display: flex; align-items: center; gap: 14px; padding: 22px 21px 8px; }
+.transfer-success-icon { width: 46px; height: 46px; border-radius: 50%; background: var(--success-bg); color: var(--success); display: grid; place-items: center; flex-shrink: 0; }
+.transfer-success-head h2 { font-size: 16px; }
+.transfer-success-head p { font-size: 11px; color: #6a7c93; margin-top: 5px; }
+.transfer-result-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding: 8px 21px 18px; }
+.transfer-result-card { border: 1px solid hsl(var(--border)); border-radius: 7px; padding: 16px 18px; display: flex; flex-direction: column; gap: 6px; background: #fcfdff; }
+.transfer-result-card small { font-size: 8px; color: #8391a5; letter-spacing: 1px; }
+.transfer-result-card strong { font-size: 14px; font-weight: 650; color: #344b68; }
+.transfer-balance-before { font-size: 10px; color: #8a97a8; }
+.transfer-balance-after { font-size: 13px; font-weight: 650; color: var(--success); font-variant-numeric: tabular-nums; }
+

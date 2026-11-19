@@ -1,0 +1,11 @@
+/* Modal */
+.modal-overlay { position: fixed; inset: 0; background: #0a1e3880; z-index: 70; display: grid; place-items: center; padding: 20px; }
+.modal-panel { background: white; border-radius: 9px; max-width: 440px; width: 100%; box-shadow: 0 18px 50px #152b4430; padding: 22px 24px; }
+.modal-head { display: flex; align-items: flex-start; gap: 13px; }
+.modal-icon { width: 40px; height: 40px; border-radius: 8px; background: #fdf3ea; color: #c2691f; display: grid; place-items: center; flex-shrink: 0; }
+.modal-head h2 { font-size: 16px; font-weight: 650; color: #2c4665; }
+.modal-head p { font-size: 10px; color: #8190a4; margin-top: 5px; }
+.modal-head .icon-button { margin-left: auto; }
+.modal-body { font-size: 11px; color: #5b6c82; line-height: 1.8; margin: 16px 0; }
+.modal-actions { display: flex; gap: 10px; justify-content: flex-end; }
+

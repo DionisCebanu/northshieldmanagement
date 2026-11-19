@@ -1,0 +1,27 @@
+.panel { background: hsl(var(--card)); border: 1px solid hsl(var(--border)); border-radius: 8px; overflow: hidden; }
+.panel-heading { padding: 20px 21px; display: flex; justify-content: space-between; align-items: center; gap: 15px; }
+.panel-heading p { color: #8290a3; font-size: 9px; margin-top: 6px; line-height: 1.6; }
+.table-scroll { overflow-x: auto; }
+.data-table { border-collapse: collapse; width: 100%; text-align: left; white-space: nowrap; font-size: 10px; }
+.data-table thead { background: #f9fafc; border-block: 1px solid #eef1f5; }
+.data-table th { font-size: 8px; color: #7e8d9f; font-weight: 550; padding: 11px 17px; }
+.data-table th:first-child, .data-table td:first-child { padding-left: 21px; }
+.data-table th:last-child, .data-table td:last-child { padding-right: 21px; }
+.data-table td { padding: 15px 17px; border-bottom: 1px solid #edf0f5; color: #617289; }
+.data-table tbody tr:last-child td { border-bottom: 0; }
+.data-table tbody tr:hover { background: #fafcff; }
+.data-table strong { color: #344b68; font-weight: 550; }
+.data-table .amount-cell { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; color: #34445b; }
+.data-table th.amount-cell { font-weight: 550; color: #7e8d9f; }
+.data-table .positive-amount { color: var(--success); }
+.transaction-table td { padding-block: 13px; }
+.transaction-description { display: flex; align-items: center; gap: 9px; }
+.transaction-description strong { display: block; font-size: 10px; }
+.transaction-description div > span { display: block; font-size: 8px; color: #8996a7; margin-top: 5px; }
+.transaction-icon { display: grid; place-items: center; background: #f1f3f7; color: #73849b; width: 30px; height: 30px; border-radius: 6px; flex-shrink: 0; }
+.incoming-icon { color: #488c71; background: #f0f7f3; }
+.account-reference { font-size: 9px; color: #6d7e94; }
+.account-reference small { display: block; margin-top: 5px; font-size: 8px; color: #92a0b1; letter-spacing: 1px; }
+.account-reference:hover { color: #284f7f; }
+.date-cell { font-size: 9px; }
+.table-footer { padding: 13px 21px; border-top: 1px solid #edf0f5; color: #8a97a8; display: flex; justify-content: space-between; gap: 12px; font-size: 8px; }

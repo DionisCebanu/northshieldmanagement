@@ -1,0 +1,46 @@
+/* Phase 3 — products, account opening, lending, bill payments */
+
+.account-card-sub { font-size: 9px; color: #6f8197; margin-top: 6px; }
+
+.address-confirmation .panel-heading { padding-bottom: 14px; }
+.address-confirm-body { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 8px 21px 18px; flex-wrap: wrap; }
+.address-confirm-text { display: flex; flex-direction: column; gap: 4px; font-size: 11px; color: #4b5e78; }
+.address-confirm-text strong { font-size: 13px; color: #2c4665; }
+.address-confirm-actions { display: flex; gap: 10px; }
+.address-edit-form { padding: 8px 21px 18px; display: flex; flex-direction: column; gap: 16px; }
+
+.issuance-form .transfer-form { padding-bottom: 22px; }
+.issuance-success .transfer-result-grid { padding-top: 4px; }
+
+.linked-accounts-block { display: flex; flex-direction: column; gap: 10px; }
+.account-pick-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.account-pick { display: flex; align-items: center; gap: 10px; border: 1px solid #dce4ee; border-radius: 7px; padding: 12px 14px; cursor: pointer; background: white; }
+.account-pick:hover { border-color: #a9bfd9; }
+.account-pick-selected { border-color: hsl(var(--primary)); box-shadow: 0 0 0 2px hsl(var(--ring) / .2); }
+.account-pick input { width: 16px; height: 16px; accent-color: hsl(var(--primary)); }
+.account-pick div { display: flex; flex-direction: column; gap: 3px; }
+.account-pick strong { font-size: 11px; color: #344b68; }
+.account-pick span { font-size: 9px; color: #8190a4; }
+
+.product-terms-note { display: flex; flex-direction: column; gap: 5px; background: #f7f9fc; border: 1px solid #e6ecf4; border-radius: 7px; padding: 14px 16px; }
+.product-terms-note strong { font-size: 12px; color: #2c4665; }
+.product-terms-note span { font-size: 10px; color: #6a7c93; }
+
+.terms-confirm { display: flex; align-items: flex-start; gap: 10px; font-size: 11px; color: #4b5e78; cursor: pointer; }
+.terms-confirm input { width: 16px; height: 16px; margin-top: 2px; accent-color: hsl(var(--primary)); }
+.full-width-field { display: flex; flex-direction: column; gap: 8px; font-size: 9px; color: #697d97; }
+.full-width-field textarea { resize: vertical; min-height: 60px; padding: 8px 10px; }
+
+.products-workspace { display: flex; flex-direction: column; gap: 20px; }
+.product-category-panel { padding: 0; }
+.product-category-heading { padding: 18px 21px 14px; border-bottom: 1px solid #edf0f5; }
+.product-category-heading h2 { font-size: 14px; }
+.product-tile-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; padding: 18px 21px; }
+.product-tile { border: 1px solid hsl(var(--border)); border-radius: 8px; padding: 16px; background: white; display: flex; flex-direction: column; gap: 10px; }
+.product-tile:hover { border-color: #a9bfd9; box-shadow: 0 4px 14px #24466c08; }
+.product-tile-top { display: flex; align-items: center; gap: 9px; }
+.product-tile-icon { width: 32px; height: 32px; background: var(--blue-tint); color: #45678c; border-radius: 7px; display: grid; place-items: center; }
+.product-tile-meta { margin-left: auto; font-size: 9px; color: #8190a4; }
+.product-tile h3 { font-size: 13px; font-weight: 650; }
+.product-tile-action { margin-top: auto; padding: 9px 12px; font-size: 10px; }
+

@@ -1,0 +1,18 @@
+/* Offers */
+.offers-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; padding: 18px 21px; }
+.offer-card { border: 1px solid hsl(var(--border)); border-radius: 8px; padding: 18px; background: white; display: flex; flex-direction: column; gap: 8px; }
+.offer-card.offer-accepted { border-color: var(--success); background: #f7fbf8; }
+.offer-card.offer-declined { border-color: #d8c9b8; background: #faf8f5; }
+.offer-card.offer-expired { opacity: .65; }
+.offer-top { display: flex; align-items: center; justify-content: space-between; }
+.offer-icon { width: 34px; height: 34px; background: #fdf3ea; color: #c2691f; border-radius: 7px; display: grid; place-items: center; }
+.offer-status { font-size: 9px; font-weight: 600; padding: 4px 8px; border-radius: 4px; background: hsl(var(--muted)); color: hsl(var(--muted-foreground)); }
+.offer-status-pending { background: #fdf3ea; color: #c2691f; }
+.offer-status-accepted { background: var(--success-bg); color: var(--success); }
+.offer-status-declined { background: #fdecec; color: hsl(var(--destructive)); }
+.offer-card h3 { font-size: 14px; font-weight: 650; }
+.offer-amount { font-size: 24px; font-weight: 700; color: #2c4665; letter-spacing: -.5px; font-variant-numeric: tabular-nums; }
+.offer-desc { font-size: 11px; color: #6a7c93; line-height: 1.7; }
+.offer-expiry { font-size: 9px; color: #8190a4; }
+.offer-actions { display: flex; gap: 9px; margin-top: 6px; padding-top: 12px; border-top: 1px solid #edf0f5; }
+

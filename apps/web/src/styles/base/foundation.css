@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 218 33% 97%; --foreground: 219 38% 19%;
+    --card: 0 0% 100%; --card-foreground: 219 38% 19%;
+    --popover: 0 0% 100%; --popover-foreground: 219 38% 19%;
+    --primary: 218 62% 25%; --primary-foreground: 0 0% 100%;
+    --secondary: 216 40% 96%; --secondary-foreground: 219 38% 19%;
+    --muted: 216 27% 95%; --muted-foreground: 218 15% 46%;
+    --accent: 213 56% 95%; --accent-foreground: 218 62% 25%;
+    --destructive: 0 63% 45%; --destructive-foreground: 0 0% 100%;
+    --border: 215 25% 89%; --input: 215 25% 86%; --ring: 218 62% 35%; --radius: .65rem;
+    --nav-bg: #122640; --nav-muted: #a5b4c8; --nav-active: #263d58;
+    --success: #177356; --success-bg: #edf7f2; --blue-tint: #eff4fb;
+    --sidebar-background: 218 56% 16%; --sidebar-foreground: 0 0% 100%; --sidebar-primary: 0 0% 100%; --sidebar-primary-foreground: 218 56% 16%; --sidebar-accent: 216 38% 25%; --sidebar-accent-foreground: 0 0% 100%; --sidebar-border: 215 25% 28%; --sidebar-ring: 213 70% 75%;
+  }
+  * { border-color: hsl(var(--border)); }
+  body { margin: 0; font-family: 'Public Sans', sans-serif; color: hsl(var(--foreground)); background: hsl(var(--background)); font-size: 13px; -webkit-font-smoothing: antialiased; }
+  button, input, select { font: inherit; }
+  button, a, input, select { -webkit-tap-highlight-color: transparent; }
+  button, a { transition: background-color 160ms ease-out, color 160ms ease-out, border-color 160ms ease-out, box-shadow 160ms ease-out; }
+  button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid hsl(var(--ring)); outline-offset: 4px; }
+  h1, h2, h3, p { margin: 0; }
+  button { cursor: pointer; }
+  a { text-decoration: none; color: inherit; }
+  button:active { transform: scale(.98); }
+}

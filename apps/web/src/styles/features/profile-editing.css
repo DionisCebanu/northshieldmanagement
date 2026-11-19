@@ -1,0 +1,16 @@
+
+/* Phase 2 — profile editing, transfers, cards */
+
+.profile-section-heading { border-bottom: 1px solid #edf0f5; }
+.section-actions { display: flex; gap: 8px; }
+.section-action { padding: 7px 11px; min-height: 32px; font-size: 9px; }
+.field-required { color: #c2553d; }
+.field-read-only { color: #8190a4; font-style: italic; }
+.field-edit { display: flex; flex-direction: column; gap: 5px; }
+.profile-input { background: white; border: 1px solid #dce4ee; color: #425c7d; width: 100%; border-radius: 5px; height: 34px; padding: 0 10px; font-size: 11px; }
+.profile-input:focus { border-color: #6f93bd; outline: 2px solid hsl(var(--ring)); outline-offset: 0; }
+.field-error { color: hsl(var(--destructive)); font-size: 8px; line-height: 1.5; }
+
+.status-danger { color: hsl(var(--destructive)); background: #fdecec; }
+.status-info { color: #3a6fae; background: #e8f0fa; }
+

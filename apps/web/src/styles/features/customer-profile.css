@@ -1,0 +1,8 @@
+.profile-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.profile-section .panel-heading { border-bottom: 1px solid #edf0f5; }
+.profile-fields { padding: 21px; margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 25px 20px; }
+.profile-fields dt { font-size: 10px; color: #8593a5; margin-bottom: 8px; }
+.profile-fields dd { font-size: 12px; color: #3b526f; line-height: 1.7; margin: 0; overflow-wrap: anywhere; }
+.account-detail { margin-top: 24px; }
+.account-detail-fields { border-top: 1px solid #edf0f5; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.detail-activity-heading { border-top: 1px solid hsl(var(--border)); }

@@ -1,0 +1,13 @@
+.bill-form { padding: 8px 21px 20px; display: flex; flex-direction: column; gap: 16px; }
+.biller-search-field { display: flex; flex-direction: column; gap: 8px; font-size: 9px; color: #697d97; }
+.biller-search { display: flex; align-items: center; gap: 9px; border: 1px solid #dce4ee; border-radius: 5px; height: 38px; padding: 0 12px; background: white; }
+.biller-search-input { border: 0; outline: 0; width: 100%; background: transparent; font-size: 11px; }
+.biller-dropdown { position: relative; border: 1px solid #dce4ee; border-radius: 7px; background: white; box-shadow: 0 8px 22px #152b4415; max-height: 240px; overflow-y: auto; z-index: 20; }
+.biller-option { display: flex; align-items: center; gap: 9px; width: 100%; padding: 11px 14px; border: 0; background: white; text-align: left; font-size: 11px; color: #344b68; border-bottom: 1px solid #f0f3f7; }
+.biller-option:hover { background: #f7f9fc; }
+.biller-option small { margin-left: auto; font-size: 9px; color: #8190a4; }
+.biller-empty { display: block; padding: 14px; font-size: 11px; color: #8190a4; }
+.inline-edit { display: inline-flex; align-items: center; gap: 6px; }
+.inline-edit .profile-input { height: 30px; font-size: 10px; }
+.hint { color: #92a0b1; font-weight: 400; }
+

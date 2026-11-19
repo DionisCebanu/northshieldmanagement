@@ -1,0 +1,4 @@
+@media (max-width: 1150px) { .card-tile-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .transfer-result-grid { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { .card-financials { grid-template-columns: 1fr; } }
+@media (max-width: 700px) { .transfer-row { grid-template-columns: 1fr; } .card-tile-grid { grid-template-columns: 1fr; } .transfer-balances { flex-direction: column; align-items: flex-start; } .transfer-arrow { transform: rotate(90deg); } }
+

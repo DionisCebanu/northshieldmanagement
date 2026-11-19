@@ -1,0 +1,16 @@
+/* Fraud & Security */
+.fraud-workspace { display: flex; flex-direction: column; gap: 20px; }
+.dispute-cases { padding: 8px 21px 18px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.dispute-case { border: 1px solid hsl(var(--border)); border-radius: 8px; padding: 16px; background: #fcfdff; display: flex; flex-direction: column; gap: 8px; }
+.dispute-case-head { display: flex; align-items: center; justify-content: space-between; }
+.dispute-status { font-size: 9px; font-weight: 600; padding: 4px 8px; border-radius: 4px; }
+.dispute-status-open { background: #fdf3ea; color: #c2691f; }
+.dispute-status-under_review { background: #e8f0fa; color: #3a6fae; }
+.dispute-status-resolved { background: var(--success-bg); color: var(--success); }
+.dispute-status-rejected { background: #fdecec; color: hsl(var(--destructive)); }
+.dispute-case-id { font-size: 10px; color: #8190a4; font-weight: 550; }
+.dispute-case-meta { display: flex; gap: 14px; font-size: 9px; color: #8190a4; }
+.dispute-case-row { display: flex; flex-direction: column; gap: 4px; }
+.dispute-case-row small { font-size: 8px; color: #8391a5; letter-spacing: .5px; }
+.dispute-case-row span { font-size: 11px; color: #4b5e78; line-height: 1.6; }
+

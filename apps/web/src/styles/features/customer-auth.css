@@ -1,0 +1,328 @@
+
+/* NorthShield — Customer Authentication */
+
+.ns-auth-bar {
+  margin: 12px 20px 0;
+  overflow: hidden;
+  color: #172b45;
+  background: #ffffff;
+  border: 1px solid #dce5f0;
+  border-radius: 14px;
+  box-shadow: 0 3px 12px rgba(20, 44, 77, 0.04);
+  transition: box-shadow 0.2s ease;
+}
+
+.ns-auth-bar:hover {
+  box-shadow: 0 5px 20px rgba(20, 44, 77, 0.07);
+}
+
+/* Header */
+
+.ns-auth-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 15px 20px;
+  background: linear-gradient(110deg, #ffffff, #f7faff);
+}
+
+.ns-auth-heading > span {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.ns-auth-heading > span svg {
+  color: #2359b5;
+}
+
+.ns-auth-heading button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid #dbe4f0;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #345476;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ns-auth-heading button:hover {
+  background: #edf4ff;
+  border-color: #a8c4f1;
+  color: #174c9b;
+}
+
+/* Verification status */
+
+.ns-auth-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 11px;
+  border-radius: 100px;
+  background: #f0f3f8;
+  color: #63748a;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.ns-auth-verified {
+  background: #e4f7ec;
+  color: #167346;
+}
+
+.ns-auth-pending {
+  background: #fff4d9;
+  color: #946000;
+}
+
+/* Expanded content */
+
+.ns-auth-body {
+  padding: 20px;
+  border-top: 1px solid #e7edf5;
+  background: #ffffff;
+}
+
+.ns-auth-body > p {
+  margin: 0 0 18px;
+  color: #63748a;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.ns-auth-body > p strong {
+  color: #203b60;
+}
+
+/* Authentication method cards */
+
+.ns-auth-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.ns-auth-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  border: 1px solid #e0e8f3;
+  border-radius: 12px;
+  background: #fbfcff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.ns-auth-card:hover {
+  border-color: #b8cef0;
+  box-shadow: 0 4px 14px rgba(35, 89, 181, 0.06);
+}
+
+.ns-auth-card h4 {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0;
+  color: #19395e;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.ns-auth-card h4 svg {
+  color: #2763bd;
+}
+
+.ns-auth-card p {
+  margin: 0;
+  color: #718198;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.ns-auth-card label {
+  color: #506580;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Inputs */
+
+.ns-auth-card select,
+.ns-auth-inline input {
+  width: 100%;
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid #d4deeb;
+  border-radius: 8px;
+  outline: none;
+  background: #ffffff;
+  color: #19395e;
+  font-size: 13px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.ns-auth-card select:focus,
+.ns-auth-inline input:focus {
+  border-color: #3977d5;
+  box-shadow: 0 0 0 3px rgba(57, 119, 213, 0.12);
+}
+
+/* Primary action buttons */
+
+.ns-auth-card button {
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 10px 15px;
+  border: 1px solid #2055ac;
+  border-radius: 8px;
+  background: #2055ac;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ns-auth-card button:hover:not(:disabled) {
+  background: #17448f;
+  border-color: #17448f;
+  box-shadow: 0 3px 9px rgba(32, 85, 172, 0.2);
+}
+
+.ns-auth-card button:disabled,
+.ns-auth-inline button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Pending authentication */
+
+.ns-auth-body .ns-auth-pending {
+  margin-top: 18px;
+  padding: 16px 18px;
+  border: 1px solid #f2dfb1;
+  border-radius: 10px;
+  background: #fffbf0;
+  color: #795a16;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.ns-auth-inline {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.ns-auth-inline label,
+.ns-auth-inline small {
+  font-size: 12px;
+}
+
+.ns-auth-inline input {
+  max-width: 140px;
+}
+
+.ns-auth-inline button {
+  padding: 9px 13px;
+  border: 1px solid #cad8eb;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #24518a;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.ns-auth-inline button:hover:not(:disabled) {
+  background: #edf4ff;
+}
+
+/* Authentication history */
+
+.ns-auth-body details {
+  margin-top: 20px;
+  padding: 14px 16px;
+  border: 1px solid #e2e9f2;
+  border-radius: 10px;
+  background: #f8fafd;
+  color: #344b67;
+  font-size: 12px;
+}
+
+.ns-auth-body summary {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ns-auth-body ul {
+  margin: 12px 0 0;
+  padding-left: 20px;
+}
+
+.ns-auth-body li {
+  padding: 6px 0;
+  color: #60738d;
+  line-height: 1.5;
+}
+
+.ns-auth-body li + li {
+  border-top: 1px solid #e7edf5;
+}
+
+/* Accessibility */
+
+.ns-auth-bar button:focus-visible,
+.ns-auth-body summary:focus-visible {
+  outline: 3px solid rgba(57, 119, 213, 0.45);
+  outline-offset: 2px;
+}
+
+/* Responsive */
+
+@media (max-width: 700px) {
+  .ns-auth-bar {
+    margin: 10px 12px 0;
+    border-radius: 12px;
+  }
+
+  .ns-auth-heading {
+    padding: 14px;
+  }
+
+  .ns-auth-body {
+    padding: 14px;
+  }
+
+  .ns-auth-actions {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .ns-auth-card {
+    padding: 16px;
+  }
+
+  .ns-auth-card button {
+    width: 100%;
+  }
+
+  .ns-auth-inline button {
+    flex: 1;
+  }
+}

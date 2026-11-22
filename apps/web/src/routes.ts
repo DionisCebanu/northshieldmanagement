@@ -10,6 +10,7 @@ export default [
 	route('products', 'routes/products.tsx'),
 	route('bill-payments', 'routes/bill-payments.tsx'),
 	route('fraud-security', 'routes/fraud-security.tsx'),
+	route('services', 'routes/services.tsx'),
 	route(':section', 'routes/coming-soon.tsx'),
 	route('*', 'routes/not-found.tsx'),
 

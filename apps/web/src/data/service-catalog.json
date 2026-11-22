@@ -1,0 +1,47 @@
+
+[
+  {
+    "id": "digital",
+    "title": "Digital banking",
+    "description": "Manage access and customer security.",
+    "services": [
+      "Password reset",
+      "OTP unlock",
+      "Suspend / restore access",
+      "Login history"
+    ]
+  },
+  {
+    "id": "payments",
+    "title": "Stop payments",
+    "description": "Manage future payment restrictions and requests.",
+    "services": [
+      "Stop cheque payment",
+      "Stop pre-authorized debit",
+      "Online card payment servicing",
+      "Stop payment history"
+    ]
+  },
+  {
+    "id": "cards",
+    "title": "Card servicing",
+    "description": "Manage activation, limits and PIN requests.",
+    "services": [
+      "Activate debit / credit card",
+      "Credit limit increase",
+      "Debit card transaction limits",
+      "PIN management"
+    ]
+  },
+  {
+    "id": "statements",
+    "title": "Statements & Documents",
+    "description": "Manage preferences and document requests.",
+    "services": [
+      "Statement delivery preferences",
+      "Generate PDF statement",
+      "Request mailed statement",
+      "Document request history"
+    ]
+  }
+]

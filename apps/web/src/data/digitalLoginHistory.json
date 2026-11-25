@@ -1,0 +1,30 @@
+[
+  {
+    "customerId": 2,
+    "at": "2026-11-21T14:32:00-05:00",
+    "device": "iPhone",
+    "channel": "Mobile",
+    "outcome": "Failed OTP"
+  },
+  {
+    "customerId": 2,
+    "at": "2026-11-21T14:30:00-05:00",
+    "device": "iPhone",
+    "channel": "Mobile",
+    "outcome": "Failed OTP"
+  },
+  {
+    "customerId": 2,
+    "at": "2026-11-21T14:28:00-05:00",
+    "device": "iPhone",
+    "channel": "Mobile",
+    "outcome": "Failed OTP"
+  },
+  {
+    "customerId": 1,
+    "at": "2026-11-20T18:45:00-05:00",
+    "device": "Windows",
+    "channel": "Web",
+    "outcome": "Successful"
+  }
+]

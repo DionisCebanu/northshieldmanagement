@@ -1,0 +1,101 @@
+.ns-db {
+  padding: 24px;
+  border: 1px solid #dce5f0;
+  border-radius: 14px;
+  background: #fff;
+  color: #19395e;
+  display: grid;
+  gap: 18px;
+}
+
+.ns-db-header,
+.ns-db-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.ns-db h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.ns-db h3 {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.ns-db p,
+.ns-db small {
+  font-size: 13px;
+  color: #53677e;
+}
+
+.ns-db-status,
+.ns-db-notice {
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: #edf4ff;
+}
+
+.ns-db-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 14px;
+}
+
+.ns-db-card,
+.ns-db-confirm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid #dce5f0;
+  border-radius: 10px;
+  background: #f8faff;
+}
+
+.ns-db button {
+  padding: 9px 14px;
+  border-radius: 8px;
+  background: #2055ac;
+  color: white;
+  font-weight: 600;
+}
+
+.ns-db button:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+}
+
+.ns-db textarea {
+  min-height: 80px;
+  padding: 10px;
+  border: 1px solid #b8c8dc;
+  border-radius: 8px;
+  background: white;
+}
+
+.ns-db-table {
+  overflow-x: auto;
+}
+
+.ns-db table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.ns-db th,
+.ns-db td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #dce5f0;
+}
+
+.ns-db button:focus-visible,
+.ns-db textarea:focus-visible {
+  outline: 2px solid #3977d5;
+  outline-offset: 2px;
+}

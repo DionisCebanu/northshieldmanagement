@@ -1,4 +1,3 @@
-/* NorthShield stylesheet entry point. Import order preserves the original cascade. */
 @import "./styles/base/foundation.css";
 @import "./styles/layout/sidebar.css";
 @import "./styles/layout/header.css";
@@ -30,3 +29,5 @@
 @import "./styles/features/customer-auth.css";
 @import "./styles/features/service-centre.css";
 @import "./styles/features/digital-banking.css";
+@import "./styles/features/stop-payments.css";
+

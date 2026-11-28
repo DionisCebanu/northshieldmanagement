@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import { PageHeading } from '@/components/customer/page-heading';
 import { DigitalBankingPanel } from '@/components/services/digital-banking/digital-banking-panel';
+import { StopPaymentsPanel } from '@/components/services/stop-payments/stop-payments-panel';
 import serviceCatalog from '@/data/service-catalog.json';
 
 const icons = {
@@ -25,6 +26,7 @@ export function ServiceCentre() {
   const [category, setCategory] = useState('all');
   const [selected, setSelected] = useState('');
   const [digitalService, setDigitalService] = useState('');
+  const [stopService, setStopService] = useState('');
   const q = query.trim().toLowerCase();
 
   const visible = serviceCatalog.filter(categoryItem => (
@@ -41,6 +43,13 @@ export function ServiceCentre() {
           <>
             <button type="button" onClick={() => setDigitalService('')}>← Back to services</button>
             <DigitalBankingPanel initialService={digitalService} />
+          </>
+        ) : stopService ? (
+          <>
+            <button type="button" onClick={() => setStopService('')}>
+              ← Back to services
+            </button>
+            <StopPaymentsPanel initialService={stopService} />
           </>
         ) : (
           <>
@@ -105,9 +114,17 @@ export function ServiceCentre() {
                           className="ns-sc-item"
                           key={service}
                           type="button"
-                          onClick={() => item.id === 'digital' ? setDigitalService(service) : setSelected(service)}
+                          onClick={() => {
+                            if (item.id === 'digital') {
+                              setDigitalService(service);
+                            } else if (item.id === 'payments') {
+                              setStopService(service);
+                            } else {
+                              setSelected(service);
+                            }
+                          }}
                         >
-                          <span>{service}<small>{item.id === 'digital' ? 'Available' : 'Planned'}</small></span>
+                          <span>{service}<small>{item.id === 'digital' || item.id === 'payments' ? 'Available' : 'Planned'}</small></span>
                           <ChevronRight size={16} />
                         </button>
                       ))}

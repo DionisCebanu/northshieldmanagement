@@ -1,0 +1,94 @@
+.stop-payments-panel {
+  display: grid;
+  gap: 16px;
+  padding: 24px;
+  border: 1px solid #dce5f0;
+  border-radius: 14px;
+  background: #fff;
+  color: #19395e;
+}
+
+.stop-payments-panel h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.stop-payments-panel h3 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.stop-payments-panel p,
+.stop-payments-panel small {
+  font-size: 13px;
+  color: #53677e;
+}
+
+.stop-payments-notice {
+  padding: 12px;
+  background: #edf4ff;
+  border-radius: 8px;
+}
+
+.stop-payments-form,
+.stop-payments-history-record {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid #dce5f0;
+  border-radius: 10px;
+  background: #f8faff;
+}
+
+.stop-payments-form label {
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.stop-payments-panel input:not([type='checkbox']),
+.stop-payments-panel select,
+.stop-payments-panel textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #b9c8db;
+  border-radius: 7px;
+  background: white;
+  color: #19395e;
+}
+
+.stop-payments-form .stop-payments-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stop-payments-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.stop-payments-panel button {
+  justify-self: start;
+  padding: 9px 14px;
+  border-radius: 8px;
+  background: #2055ac;
+  color: white;
+  font-weight: 600;
+}
+
+.stop-payments-panel button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.stop-payments-panel [role='alert'] {
+  color: #a12424;
+}
+
+.stop-payments-service-fields {
+  display: grid;
+  gap: 12px;
+}
